@@ -16,17 +16,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="shader\fs.frag" />
-    <None Include="shader\vs.vert" />
-    <None Include="shader\fs_skybox.frag" />
-    <None Include="shader\vs_skybox.vert" />
-    <None Include="shader\fs_shadowMap.frag" />
-    <None Include="shader\vs_shadowMap.vert" />
-    <None Include="shader\fs_shadowCubeMap.frag" />
-    <None Include="shader\geom_shadowCubeMap.geom" />
-    <None Include="shader\vs_shadowCubeMap.vert" />
-    <None Include="shader\fs_collision.frag" />
-    <None Include="shader\vs_collision.vert" />
+    <None Include="engine\shader\fs.frag" />
+    <None Include="engine\shader\vs.vert" />
+    <None Include="engine\shader\fs_skybox.frag" />
+    <None Include="engine\shader\vs_skybox.vert" />
+    <None Include="engine\shader\fs_shadowMap.frag" />
+    <None Include="engine\shader\vs_shadowMap.vert" />
+    <None Include="engine\shader\fs_shadowCubeMap.frag" />
+    <None Include="engine\shader\geom_shadowCubeMap.geom" />
+    <None Include="engine\shader\vs_shadowCubeMap.vert" />
+    <None Include="engine\shader\fs_collision.frag" />
+    <None Include="engine\shader\vs_collision.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="engine\camera\camera.cpp">

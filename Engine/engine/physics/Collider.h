@@ -35,7 +35,7 @@ public:
 	CollisionPoints collision(Collider* collider_b);
 
 	ColliderSettings settings;
-
+	Model* getModel();
 private:
 	Model* _model;
 	Transform* _transform;

@@ -61,7 +61,7 @@ private:
 		};
 		sky->loadCubeMap(textures);
 		sky->getModel()->getMesh()->loadModelFromFile("./model/Cube.obj");
-		sky->getModel()->getMaterial()->loadShaders("./shader/vs_skybox.vert", "./shader/fs_skybox.frag");
+		sky->getModel()->getMaterial()->loadShaders("./engine/shader/vs_skybox.vert", "./engine/shader/fs_skybox.frag");
 		sky->getModel()->setMode(GL_TRIANGLES);
 
 	}
@@ -75,7 +75,7 @@ private:
 		mainLight->dirLight.specular = { 0.2,0.2,0.2 };
 
 		//Настрока теней
-		Shadow* shadow = new Shadow("./shader/vs_shadowMap.vert", "./shader/fs_shadowMap.frag");
+		Shadow* shadow = new Shadow("./engine/shader/vs_shadowMap.vert", "./engine/shader/fs_shadowMap.frag");
 		scene->setShadow(shadow);
 
 		Light* spot_light = new Light();
@@ -93,7 +93,7 @@ private:
 		scene->addLight(spot_light);
 
 		//Настройка теней для spot_light
-		ShadowPS* shadow_spot = new ShadowPS("./shader/vs_shadowCubeMap.vert", "./shader/geom_shadowCubeMap.geom", "./shader/fs_shadowCubeMap.frag");
+		ShadowPS* shadow_spot = new ShadowPS("./engine/shader/vs_shadowCubeMap.vert", "./engine/shader/geom_shadowCubeMap.geom", "./engine/shader/fs_shadowCubeMap.frag");
 		spot_light->setShadowPS(shadow_spot);
 
 		
@@ -111,7 +111,7 @@ private:
 		scene->addLight(point_light);
 
 		//Настройка под теней для point_light
-		ShadowPS* shadow_point = new ShadowPS("./shader/vs_shadowCubeMap.vert", "./shader/geom_shadowCubeMap.geom", "./shader/fs_shadowCubeMap.frag");
+		ShadowPS* shadow_point = new ShadowPS("./engine/shader/vs_shadowCubeMap.vert", "./engine/shader/geom_shadowCubeMap.geom", "./engine/shader/fs_shadowCubeMap.frag");
 		point_light->setShadowPS(shadow_point);
 		*/
 	}

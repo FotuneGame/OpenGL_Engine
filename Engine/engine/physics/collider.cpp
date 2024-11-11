@@ -45,7 +45,6 @@ void Collider::loadColliderModelFromFile(const char* filename) {
 	if (!_verticesModel.size())
 		_verticesModel.clear();
 	_model->getMesh()->loadModelFromFile(filename, outVertices,outTextures,outNormals,_verticesModel, temp_uvs, temp_normals);
-	_model->getMaterial()->loadShaders("./shader/vs_collision.vert", "./shader/fs_collision.frag");
 	_model->getMaterial()->loadColor(_color);
 	_model->setMode(GL_LINE_LOOP);
 	if(!_vertices.size())
@@ -53,6 +52,10 @@ void Collider::loadColliderModelFromFile(const char* filename) {
 	for (glm::vec3 vertex : _verticesModel) {
 		_vertices.push_back(vertex);
 	}
+}
+
+Model* Collider::getModel() {
+	return _model;
 }
 
 
