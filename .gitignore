@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Разрешить добавлять файлы из папки 
+!./Engine/model/*
